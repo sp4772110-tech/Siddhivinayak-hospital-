@@ -1,668 +1,1533 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Eye Nova Hospital | Dr. Shruti Doye</title>
-  <meta name="description" content="Eye Nova Hospital, Doyewada, Gondia-Amgaon Road, Kidangipar. Dr. Shruti Doye, MBBS, MS (Ophthalmology). Eye care, cataract, glaucoma, glasses and lens care.">
+<title>Siddhivinayak Multispeciality Hospital & Trauma Center</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
+<meta name="description" content="Siddhivinayak Multispeciality Hospital and Trauma Center, Amgaon. 24x7 Emergency Care and Multispeciality Medical Services.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f8fa;
+    color:#18212f;
+    line-height:1.6;
+}
+
+/* ================= TOP BAR ================= */
+
+.topbar{
+    background:#071a33;
+    color:white;
+    padding:10px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:14px;
+}
+
+.topbar span{
+    opacity:.95;
+}
+
+.emergency-top{
+    color:#e8c56a;
+    font-weight:bold;
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:white;
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.navbar{
+    min-height:82px;
+    padding:0 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.logo-area img{
+    width:58px;
+    height:58px;
+    object-fit:contain;
+}
+
+.logo-text h2{
+    color:#092445;
+    font-size:20px;
+    line-height:1.15;
+}
+
+.logo-text small{
+    color:#b18a35;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#25344a;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#b18a35;
+}
+
+.nav-appointment{
+    background:#b18a35;
+    color:white !important;
+    padding:12px 18px;
+    border-radius:5px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:650px;
+    background:
+    linear-gradient(90deg,rgba(4,20,39,.96),rgba(4,20,39,.72),rgba(4,20,39,.30)),
+    url("hospital-front.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    padding:70px 7%;
+}
+
+.hero-content{
+    max-width:720px;
+    color:white;
+}
+
+.hero-label{
+    display:inline-block;
+    color:#e7c76e;
+    border-left:3px solid #e7c76e;
+    padding-left:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:55px;
+    line-height:1.08;
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:#e7c76e;
+}
+
+.hero p{
+    max-width:620px;
+    font-size:18px;
+    color:#e8edf3;
+    margin-bottom:32px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-gold{
+    background:#b18a35;
+    color:white;
+}
+
+.btn-gold:hover{
+    background:#947127;
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:1px solid white;
+    color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:#092445;
+}
+
+/* ================= TRUST STRIP ================= */
+
+.trust-strip{
+    background:white;
+    margin:-45px auto 0;
+    position:relative;
+    width:88%;
+    box-shadow:0 12px 35px rgba(0,0,0,.10);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-radius:7px;
+    overflow:hidden;
+}
+
+.trust-item{
+    padding:24px 20px;
+    text-align:center;
+    border-right:1px solid #eee;
+}
+
+.trust-item:last-child{
+    border-right:none;
+}
+
+.trust-item strong{
+    display:block;
+    color:#092445;
+    font-size:17px;
+}
+
+.trust-item span{
+    font-size:13px;
+    color:#777;
+}
+
+/* ================= GENERAL ================= */
+
+section{
+    padding:90px 7%;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-heading small{
+    color:#b18a35;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.section-heading h2{
+    font-family:Georgia,serif;
+    color:#092445;
+    font-size:40px;
+    margin-top:8px;
+}
+
+.section-heading p{
+    max-width:650px;
+    margin:12px auto 0;
+    color:#6c7581;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:65px;
+    align-items:center;
+}
+
+.about-image{
+    position:relative;
+}
+
+.about-image img{
+    width:100%;
+    height:460px;
+    object-fit:cover;
+    border-radius:7px;
+}
+
+.about-badge{
+    position:absolute;
+    bottom:-20px;
+    right:-20px;
+    background:#092445;
+    color:white;
+    padding:25px;
+    border-radius:6px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.about-badge strong{
+    display:block;
+    color:#e7c76e;
+    font-size:28px;
+}
+
+.about-content h3{
+    font-family:Georgia,serif;
+    color:#092445;
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    color:#606a77;
+    margin-bottom:18px;
+}
+
+.check-list{
+    list-style:none;
+    margin-top:25px;
+}
+
+.check-list li{
+    margin:13px 0;
+    color:#334154;
+}
+
+.check-list li::before{
+    content:"✓";
+    color:#b18a35;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+/* ================= SERVICES ================= */
+
+.services-section{
+    background:#f1f3f6;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.service-card{
+    background:white;
+    padding:35px 28px;
+    border-radius:7px;
+    border:1px solid #e6e8eb;
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+}
+
+.service-icon{
+    width:55px;
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#f7edcf;
+    color:#9a7527;
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    color:#092445;
+    margin-bottom:10px;
+}
+
+.service-card p{
+    color:#6b7480;
+    font-size:14px;
+}
+
+/* ================= DOCTORS ================= */
+
+.doctors-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.doctor-card{
+    background:white;
+    border-radius:8px;
+    overflow:hidden;
+    border:1px solid #e6e6e6;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.doctor-card img{
+    width:100%;
+    height:290px;
+    object-fit:cover;
+    background:#e9edf2;
+}
+
+.doctor-info{
+    padding:25px;
+}
+
+.doctor-info h3{
+    color:#092445;
+    font-family:Georgia,serif;
+    font-size:21px;
+}
+
+.doctor-info .qualification{
+    color:#b18a35;
+    font-size:13px;
+    font-weight:bold;
+    margin:6px 0;
+}
+
+.doctor-info p{
+    color:#6b7480;
+    font-size:14px;
+}
+
+/* ================= WHY US ================= */
+
+.why-section{
+    background:#092445;
+    color:white;
+}
+
+.why-section .section-heading h2{
+    color:white;
+}
+
+.why-section .section-heading p{
+    color:#c7d0dc;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.why-card{
+    border:1px solid rgba(255,255,255,.15);
+    padding:30px 22px;
+    text-align:center;
+    border-radius:7px;
+}
+
+.why-card .number{
+    color:#e7c76e;
+    font-size:32px;
+    font-family:Georgia,serif;
+}
+
+.why-card h3{
+    margin:12px 0 8px;
+}
+
+.why-card p{
+    color:#c3ccd7;
+    font-size:14px;
+}
+
+/* ================= EMERGENCY ================= */
+
+.emergency{
+    background:
+    linear-gradient(rgba(7,26,51,.93),rgba(7,26,51,.93)),
+    url("hospital-about.jpg") center/cover;
+    text-align:center;
+    color:white;
+}
+
+.emergency h2{
+    font-family:Georgia,serif;
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.emergency p{
+    color:#d4dce6;
+    margin-bottom:25px;
+}
+
+.emergency-number{
+    font-size:30px;
+    color:#e7c76e;
+    font-weight:bold;
+    display:block;
+    margin-bottom:25px;
+    text-decoration:none;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:6px;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.02);
+}
+
+/* ================= FIND US ================= */
+
+.find-section{
+    background:#f1f3f6;
+}
+
+.find-grid{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:35px;
+    align-items:stretch;
+}
+
+.contact-box{
+    background:#092445;
+    color:white;
+    padding:40px;
+    border-radius:7px;
+}
+
+.contact-box h3{
+    font-family:Georgia,serif;
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.contact-item{
+    margin:20px 0;
+}
+
+.contact-item strong{
+    color:#e7c76e;
+    display:block;
+    margin-bottom:4px;
+}
+
+.contact-item a{
+    color:white;
+    text-decoration:none;
+}
+
+.map-box{
+    background:white;
+    min-height:420px;
+    border-radius:7px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.map-box iframe{
+    width:100%;
+    height:100%;
+    min-height:420px;
+    border:0;
+}
+
+/* ================= APPOINTMENT ================= */
+
+.appointment{
+    background:#b18a35;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.appointment h2{
+    font-family:Georgia,serif;
+    font-size:35px;
+}
+
+.appointment p{
+    opacity:.9;
+}
+
+.appointment .btn{
+    background:#092445;
+    white-space:nowrap;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#06172c;
+    color:#bac5d2;
+    padding:55px 7% 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:50px;
+    padding-bottom:35px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.footer-brand h2{
+    color:white;
+    font-family:Georgia,serif;
+    margin-bottom:12px;
+}
+
+.footer-title{
+    color:#e7c76e;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.footer-links{
+    list-style:none;
+}
+
+.footer-links li{
+    margin:8px 0;
+}
+
+.footer-links a{
+    color:#bac5d2;
+    text-decoration:none;
+}
+
+.copyright{
+    text-align:center;
+    padding-top:25px;
+    font-size:13px;
+}
+
+/* ================= FLOATING CALL ================= */
+
+.call-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#b18a35;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    z-index:1000;
+}
+
+/* ================= MOBILE ================= */
+
+.mobile-menu{
+    display:none;
+    font-size:27px;
+    cursor:pointer;
+    color:#092445;
+}
+
+@media(max-width:900px){
+
+    .topbar{
+        font-size:12px;
+        padding:8px 4%;
     }
 
-    html {
-      scroll-behavior: smooth;
+    .navbar{
+        padding:12px 5%;
     }
 
-    body {
-      background: #f5fbff;
-      color: #183b56;
-      line-height: 1.6;
+    .mobile-menu{
+        display:block;
     }
 
-    /* HEADER */
-    header {
-      background: white;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:82px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        padding:25px;
+        box-shadow:0 10px 20px rgba(0,0,0,.1);
     }
 
-    .logo {
-      font-size: 25px;
-      font-weight: bold;
-      color: #087ea4;
+    .nav-links.active{
+        display:flex;
     }
 
-    .logo span {
-      color: #173f5f;
+    .hero{
+        min-height:600px;
+        padding:60px 6%;
     }
 
-    nav a {
-      text-decoration: none;
-      color: #183b56;
-      margin-left: 25px;
-      font-weight: 600;
+    .hero h1{
+        font-size:40px;
     }
 
-    nav a:hover {
-      color: #087ea4;
+    .trust-strip{
+        width:92%;
+        grid-template-columns:repeat(2,1fr);
     }
 
-    /* HERO */
-    .hero {
-      min-height: 88vh;
-      display: flex;
-      align-items: center;
-      padding: 70px 7%;
-      background: linear-gradient(135deg, #eafaff, #ffffff);
+    .trust-item:nth-child(2){
+        border-right:none;
     }
 
-    .hero-content {
-      max-width: 650px;
+    .about{
+        grid-template-columns:1fr;
     }
 
-    .small-title {
-      color: #087ea4;
-      font-weight: bold;
-      font-size: 17px;
-      margin-bottom: 10px;
+    .services-grid,
+    .doctors-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .hero h1 {
-      font-size: 58px;
-      line-height: 1.1;
-      color: #123b59;
-      margin-bottom: 20px;
+    .why-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .hero h1 span {
-      color: #087ea4;
+    .find-grid{
+        grid-template-columns:1fr;
     }
 
-    .hero p {
-      font-size: 19px;
-      color: #506979;
-      margin-bottom: 28px;
+    .appointment{
+        flex-direction:column;
+        text-align:center;
     }
 
-    .doctor {
-      font-size: 20px;
-      font-weight: bold;
-      color: #183b56;
-      margin-bottom: 25px;
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+}
+
+@media(max-width:600px){
+
+    .logo-text h2{
+        font-size:15px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 27px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-right: 10px;
-      margin-bottom: 10px;
+    .logo-text small{
+        font-size:9px;
     }
 
-    .call-btn {
-      background: #087ea4;
-      color: white;
+    .logo-area img{
+        width:45px;
+        height:45px;
     }
 
-    .call-btn:hover {
-      background: #056681;
+    section{
+        padding:65px 5%;
     }
 
-    .location-btn {
-      border: 2px solid #087ea4;
-      color: #087ea4;
-      background: white;
+    .hero{
+        min-height:560px;
     }
 
-    /* EYE ICON */
-    .eye-box {
-      margin-left: auto;
-      width: 330px;
-      height: 230px;
-      border-radius: 50%;
-      border: 8px solid #087ea4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: white;
-      box-shadow: 0 15px 35px rgba(8,126,164,0.18);
+    .hero h1{
+        font-size:34px;
     }
 
-    .eye {
-      width: 130px;
-      height: 80px;
-      border: 7px solid #183b56;
-      border-radius: 80% 10%;
-      transform: rotate(45deg);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .hero p{
+        font-size:16px;
     }
 
-    .pupil {
-      width: 38px;
-      height: 38px;
-      background: #087ea4;
-      border-radius: 50%;
+    .trust-strip{
+        grid-template-columns:1fr 1fr;
     }
 
-    /* SECTION */
-    section {
-      padding: 75px 7%;
+    .trust-item{
+        padding:18px 8px;
     }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
+    .section-heading h2{
+        font-size:31px;
     }
 
-    .section-title h2 {
-      font-size: 38px;
-      color: #123b59;
-      margin-bottom: 8px;
+    .about-image img{
+        height:330px;
     }
 
-    .section-title p {
-      color: #68808e;
+    .about-badge{
+        right:10px;
+        bottom:-15px;
     }
 
-    /* ABOUT */
-    .about {
-      background: white;
+    .services-grid,
+    .doctors-grid,
+    .why-grid,
+    .gallery{
+        grid-template-columns:1fr;
     }
 
-    .about-box {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
+    .doctor-card img{
+        height:330px;
     }
 
-    .about-box p {
-      font-size: 18px;
-      color: #536d7c;
+    .gallery img{
+        height:260px;
     }
 
-    .highlight {
-      color: #087ea4;
-      font-weight: bold;
+    .appointment h2{
+        font-size:28px;
     }
 
-    /* SERVICES */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      max-width: 1100px;
-      margin: auto;
+    .emergency h2{
+        font-size:31px;
     }
 
-    .service-card {
-      background: white;
-      padding: 30px 20px;
-      text-align: center;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-      transition: 0.3s;
+    .emergency-number{
+        font-size:25px;
     }
+}
 
-    .service-card:hover {
-      transform: translateY(-7px);
-    }
-
-    .service-icon {
-      font-size: 42px;
-      margin-bottom: 12px;
-    }
-
-    .service-card h3 {
-      color: #123b59;
-      margin-bottom: 8px;
-    }
-
-    .service-card p {
-      color: #68808e;
-      font-size: 14px;
-    }
-
-    /* DOCTOR */
-    .doctor-section {
-      background: #eafaff;
-    }
-
-    .doctor-card {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      padding: 40px;
-      border-radius: 18px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    }
-
-    .doctor-card h2 {
-      font-size: 32px;
-      color: #123b59;
-    }
-
-    .qualification {
-      color: #087ea4;
-      font-weight: bold;
-      margin: 10px 0 20px;
-      font-size: 18px;
-    }
-
-    /* LOCATION */
-    .location-box {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-      background: white;
-      padding: 40px;
-      border-radius: 18px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-    }
-
-    .location-box h3 {
-      font-size: 25px;
-      margin-bottom: 15px;
-      color: #123b59;
-    }
-
-    .location-box p {
-      color: #607887;
-      margin-bottom: 20px;
-    }
-
-    /* TIMING */
-    .timing {
-      background: #123b59;
-      color: white;
-      text-align: center;
-    }
-
-    .timing h2 {
-      font-size: 35px;
-      margin-bottom: 20px;
-    }
-
-    .timing p {
-      font-size: 18px;
-      margin: 6px;
-    }
-
-    .closed {
-      color: #aeeaff;
-      font-weight: bold;
-    }
-
-    /* CTA */
-    .cta {
-      text-align: center;
-      background: #eafaff;
-    }
-
-    .cta h2 {
-      font-size: 38px;
-      color: #123b59;
-      margin-bottom: 12px;
-    }
-
-    .cta p {
-      color: #607887;
-      margin-bottom: 25px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #0c2b40;
-      color: white;
-      text-align: center;
-      padding: 25px 10px;
-    }
-
-    footer p {
-      font-size: 14px;
-      margin: 5px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 850px) {
-
-      header {
-        padding: 15px 5%;
-      }
-
-      nav {
-        display: none;
-      }
-
-      .hero {
-        text-align: center;
-        flex-direction: column;
-        padding: 60px 5%;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      .eye-box {
-        margin: 45px auto 0;
-        width: 260px;
-        height: 180px;
-      }
-
-      .services {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      section {
-        padding: 55px 5%;
-      }
-    }
-
-    @media (max-width: 500px) {
-
-      .services {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 37px;
-      }
-
-      .section-title h2 {
-        font-size: 30px;
-      }
-
-      .doctor-card,
-      .location-box {
-        padding: 25px 18px;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      👁️ Eye <span>Nova Hospital</span>
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <span>Professional Multispeciality Healthcare</span>
+    <span class="emergency-top">● 24×7 EMERGENCY AVAILABLE</span>
+</div>
+
+
+<!-- NAVBAR -->
+
+<header>
+
+<nav class="navbar">
+
+    <div class="logo-area">
+
+        <img src="logo.png" alt="Siddhivinayak Hospital Logo">
+
+        <div class="logo-text">
+            <h2>Siddhivinayak Hospital</h2>
+            <small>Multispeciality & Trauma Center</small>
+        </div>
+
     </div>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#doctor">Doctor</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Specialities</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#find">Find Us</a>
+
+        <a href="tel:8623822511" class="nav-appointment">
+            Appointment
+        </a>
+    </div>
+
+</nav>
+
+</header>
 
 
-  <!-- HERO -->
-  <section class="hero" id="home">
+<!-- HERO -->
+
+<section class="hero" id="home">
 
     <div class="hero-content">
 
-      <div class="small-title">
-        PROFESSIONAL EYE CARE
-      </div>
+        <div class="hero-label">
+            TRUSTED MULTISPECIALITY CARE
+        </div>
 
-      <h1>
-        Clear Vision.<br>
-        <span>Better Life.</span>
-      </h1>
+        <h1>
+            Compassionate Care.<br>
+            <span>Advanced Treatment.</span>
+        </h1>
 
-      <p>
-        Welcome to <strong>Eye Nova Hospital</strong>, providing
-        professional eye care and treatment in Kidangipar,
-        Gondia–Amgaon Road.
-      </p>
-
-      <div class="doctor">
-        Dr. Shruti Doye<br>
-        <small>MBBS, MS (Ophthalmology)</small>
-      </div>
-
-      <a href="tel:9309082146" class="btn call-btn">
-        📞 Call for Appointment
-      </a>
-
-      <a href="#contact" class="btn location-btn">
-        📍 Find Us
-      </a>
-
-    </div>
-
-
-    <div class="eye-box">
-      <div class="eye">
-        <div class="pupil"></div>
-      </div>
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-
-    <div class="section-title">
-      <h2>About Eye Nova Hospital</h2>
-      <p>Dedicated to better eye health</p>
-    </div>
-
-    <div class="about-box">
-
-      <p>
-        <strong>Eye Nova Hospital</strong> is located directly on
-        the <span class="highlight">Gondia–Amgaon Road</span>
-        at Doyewada, Kidangipar.
-      </p>
-
-      <br>
-
-      <p>
-        Its main-road location makes the hospital
-        <span class="highlight">easy to find and convenient for patients</span>
-        coming for eye consultation and treatment.
-      </p>
-
-      <br>
-
-      <p>
-        The hospital provides eye-care services under the
-        guidance of <strong>Dr. Shruti Doye</strong>,
-        MBBS, MS (Ophthalmology).
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- SERVICES -->
-  <section id="services">
-
-    <div class="section-title">
-      <h2>Our Eye Care Services</h2>
-      <p>Eye care and treatment services</p>
-    </div>
-
-    <div class="services">
-
-      <div class="service-card">
-        <div class="service-icon">👓</div>
-        <h3>Glasses</h3>
         <p>
-          Eye examination and guidance regarding
-          vision correction and glasses.
+            Siddhivinayak Multispeciality Hospital and Trauma Center
+            provides comprehensive medical care with experienced
+            specialists and 24×7 emergency support in Amgaon.
         </p>
-      </div>
 
-      <div class="service-card">
-        <div class="service-icon">👁️</div>
-        <h3>Lens Care</h3>
+        <div class="hero-buttons">
+
+            <a href="tel:8623822511" class="btn btn-gold">
+                📞 Book Appointment
+            </a>
+
+            <a href="#services" class="btn btn-outline">
+                Explore Specialities
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRUST -->
+
+<div class="trust-strip">
+
+    <div class="trust-item">
+        <strong>24×7</strong>
+        <span>Emergency Care</span>
+    </div>
+
+    <div class="trust-item">
+        <strong>5+</strong>
+        <span>Medical Specialists</span>
+    </div>
+
+    <div class="trust-item">
+        <strong>Multi</strong>
+        <span>Speciality Services</span>
+    </div>
+
+    <div class="trust-item">
+        <strong>Amgaon</strong>
+        <span>Convenient Location</span>
+    </div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="about">
+
+        <div class="about-image">
+
+            <img src="hospital-about.jpg"
+                 alt="Siddhivinayak Hospital">
+
+            <div class="about-badge">
+                <strong>24×7</strong>
+                Emergency Support
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <h3>Healthcare With Care, Expertise & Trust</h3>
+
+            <p>
+                Siddhivinayak Multispeciality Hospital and Trauma Center
+                is designed to provide patients and families with
+                accessible, professional and compassionate healthcare.
+            </p>
+
+            <p>
+                Our team includes specialists across orthopaedics,
+                general medicine, laparoscopic surgery, paediatrics,
+                neonatal care and gynaecology.
+            </p>
+
+            <ul class="check-list">
+
+                <li>Experienced medical specialists</li>
+                <li>Multispeciality healthcare under one roof</li>
+                <li>24×7 emergency assistance</li>
+                <li>Patient-focused medical care</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services-section" id="services">
+
+    <div class="section-heading">
+
+        <small>OUR SPECIALITIES</small>
+
+        <h2>Comprehensive Medical Care</h2>
+
         <p>
-          Eye care and consultation related
-          to lens requirements.
+            A range of medical and surgical specialities
+            for patients of different age groups.
         </p>
-      </div>
 
-      <div class="service-card">
-        <div class="service-icon">🔬</div>
-        <h3>Cataract</h3>
+    </div>
+
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <div class="service-icon">🦴</div>
+            <h3>Joint & Spine Surgery</h3>
+            <p>
+                Specialist care for joint, bone and spine-related
+                conditions and surgical treatment.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <div class="service-icon">🩺</div>
+            <h3>General Medicine</h3>
+            <p>
+                Medical consultation, diagnosis and treatment
+                for common and complex health conditions.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <div class="service-icon">⚕</div>
+            <h3>Laparoscopic Surgery</h3>
+            <p>
+                General and laparoscopic surgical consultation
+                and treatment.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <div class="service-icon">👶</div>
+            <h3>Paediatrics & Neonatal Care</h3>
+            <p>
+                Specialised healthcare for children and
+                newborn babies.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <div class="service-icon">❤</div>
+            <h3>Gynaecology</h3>
+            <p>
+                Women's health and gynaecological consultation
+                with specialist care.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <div class="service-icon">🚑</div>
+            <h3>24×7 Emergency Care</h3>
+            <p>
+                Emergency assistance available around the clock
+                for urgent medical situations.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DOCTORS -->
+
+<section id="doctors">
+
+    <div class="section-heading">
+
+        <small>OUR MEDICAL TEAM</small>
+
+        <h2>Meet Our Specialists</h2>
+
         <p>
-          Consultation and eye care for
-          cataract-related concerns.
+            Experienced doctors providing speciality-focused
+            medical care.
         </p>
-      </div>
 
-      <div class="service-card">
-        <div class="service-icon">🩺</div>
-        <h3>Glaucoma</h3>
+    </div>
+
+
+    <div class="doctors-grid">
+
+
+        <div class="doctor-card">
+
+            <img src="doctor-manish.jpg"
+                 alt="Dr. Manish L. Pandhare">
+
+            <div class="doctor-info">
+
+                <h3>Dr. Manish L. Pandhare</h3>
+
+                <div class="qualification">
+                    Joint & Spine Surgery
+                </div>
+
+                <p>
+                    Specialist in joint and spine surgery.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="doctor-card">
+
+            <img src="doctor-bhuwan.jpg"
+                 alt="Dr. Bhuwan Lanjewar">
+
+            <div class="doctor-info">
+
+                <h3>Dr. Bhuwan Lanjewar</h3>
+
+                <div class="qualification">
+                    General Physician
+                </div>
+
+                <p>
+                    General medical consultation and treatment.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="doctor-card">
+
+            <img src="doctor-sachin.jpg"
+                 alt="Dr. Sachin Kelnaka">
+
+            <div class="doctor-info">
+
+                <h3>Dr. Sachin Kelnaka</h3>
+
+                <div class="qualification">
+                    MBBS, MS · General Laparoscopic Surgeon
+                </div>
+
+                <p>
+                    General and laparoscopic surgical care.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="doctor-card">
+
+            <img src="doctor-ashwin.jpg"
+                 alt="Dr. Ashwin Burde">
+
+            <div class="doctor-info">
+
+                <h3>Dr. Ashwin Burde</h3>
+
+                <div class="qualification">
+                    Paediatric & Neonatal Specialist
+                </div>
+
+                <p>
+                    Specialist care for children and newborns.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="doctor-card">
+
+            <img src="doctor-dawal.jpg"
+                 alt="Dr. Dawal Sawant">
+
+            <div class="doctor-info">
+
+                <h3>Dr. Dawal Sawant</h3>
+
+                <div class="qualification">
+                    Gynaecology Specialist
+                </div>
+
+                <p>
+                    Specialist women's healthcare and gynaecology.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- WHY CHOOSE -->
+
+<section class="why-section">
+
+    <div class="section-heading">
+
+        <small>WHY SIDDHIVINAYAK</small>
+
+        <h2>Care Designed Around Patients</h2>
+
         <p>
-          Consultation and management of
-          glaucoma-related eye conditions.
+            Our focus is on accessible, coordinated and
+            compassionate healthcare.
         </p>
-      </div>
 
     </div>
 
-  </section>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <div class="number">01</div>
+            <h3>Specialist Care</h3>
+            <p>
+                Multiple medical specialities in one place.
+            </p>
+        </div>
 
 
-  <!-- DOCTOR -->
-  <section class="doctor-section" id="doctor">
-
-    <div class="section-title">
-      <h2>Meet Your Eye Specialist</h2>
-    </div>
-
-    <div class="doctor-card">
-
-      <h2>Dr. Shruti Doye</h2>
-
-      <div class="qualification">
-        MBBS, MS (Ophthalmology)
-      </div>
-
-      <p>
-        Eye Specialist at Eye Nova Hospital,
-        providing professional eye consultation
-        and treatment.
-      </p>
-
-      <br>
-
-      <a href="tel:9309082146" class="btn call-btn">
-        📞 Call Dr. Shruti Doye
-      </a>
-
-    </div>
-
-  </section>
+        <div class="why-card">
+            <div class="number">02</div>
+            <h3>24×7 Emergency</h3>
+            <p>
+                Emergency support available round the clock.
+            </p>
+        </div>
 
 
-  <!-- LOCATION -->
-  <section id="contact">
+        <div class="why-card">
+            <div class="number">03</div>
+            <h3>Patient Focused</h3>
+            <p>
+                Care with attention to patients and families.
+            </p>
+        </div>
 
-    <div class="section-title">
-      <h2>Visit Eye Nova Hospital</h2>
-      <p>Easy to locate on the main road</p>
-    </div>
 
-    <div class="location-box">
-
-      <h3>📍 Our Location</h3>
-
-      <p>
-        Doyewada, Gondia–Amgaon Road,<br>
-        Kidangipar, Maharashtra
-      </p>
-
-      <p>
-        The hospital is situated directly on the
-        main road, making it easy for patients
-        to locate.
-      </p>
-
-      <a
-        href="https://www.google.com/maps/search/?api=1&query=Eye+Nova+Hospital+Kidangipar+Gondia"
-        target="_blank"
-        class="btn location-btn">
-        🗺️ Open Google Maps
-      </a>
+        <div class="why-card">
+            <div class="number">04</div>
+            <h3>Convenient Location</h3>
+            <p>
+                Located on Gondia Road in Amgaon.
+            </p>
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- TIMING -->
-  <section class="timing">
+<!-- EMERGENCY -->
 
-    <h2>Hospital Timings</h2>
+<section class="emergency">
 
-    <p>🕙 Monday – Saturday: <strong>10:00 AM – 6:00 PM</strong></p>
-
-    <p class="closed">
-      Sunday: Closed
-    </p>
-
-  </section>
-
-
-  <!-- CALL TO ACTION -->
-  <section class="cta">
-
-    <h2>Need an Eye Consultation?</h2>
+    <h2>Need Medical Assistance?</h2>
 
     <p>
-      Call Eye Nova Hospital to enquire about
-      consultation and treatment.
+        For appointments or urgent assistance,
+        contact the hospital directly.
     </p>
 
-    <a href="tel:9309082146" class="btn call-btn">
-      📞 9309082146
+    <a href="tel:8623822511" class="emergency-number">
+        8623822511
     </a>
 
-  </section>
+    <a href="tel:8623822511" class="btn btn-gold">
+        Call Hospital
+    </a>
+
+</section>
 
 
-  <!-- FOOTER -->
-  <footer>
+<!-- GALLERY -->
 
-    <p>
-      © 2026 Eye Nova Hospital. All Rights Reserved.
-    </p>
+<section id="gallery">
 
-    <p>
-      Doyewada, Gondia–Amgaon Road, Kidangipar
-    </p>
+    <div class="section-heading">
 
-  </footer>
+        <small>HOSPITAL GALLERY</small>
+
+        <h2>Our Hospital</h2>
+
+        <p>
+            Hospital photographs and facilities can be
+            added here.
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <img src="gallery1.jpg" alt="Hospital Gallery">
+        <img src="gallery2.jpg" alt="Hospital Gallery">
+        <img src="gallery3.jpg" alt="Hospital Gallery">
+        <img src="gallery4.jpg" alt="Hospital Gallery">
+        <img src="gallery5.jpg" alt="Hospital Gallery">
+        <img src="gallery6.jpg" alt="Hospital Gallery">
+
+    </div>
+
+</section>
+
+
+<!-- FIND US -->
+
+<section class="find-section" id="find">
+
+    <div class="section-heading">
+
+        <small>FIND US</small>
+
+        <h2>Visit Siddhivinayak Hospital</h2>
+
+        <p>
+            Find the hospital easily on Gondia Road, Amgaon.
+        </p>
+
+    </div>
+
+
+    <div class="find-grid">
+
+
+        <div class="contact-box">
+
+            <h3>Hospital Information</h3>
+
+
+            <div class="contact-item">
+
+                <strong>📍 ADDRESS</strong>
+
+                <span>
+                    Purani SBI Building,<br>
+                    Gondia Road, Amgaon,<br>
+                    Maharashtra
+                </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>📞 APPOINTMENT</strong>
+
+                <a href="tel:8623822511">
+                    8623822511
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>🚑 EMERGENCY</strong>
+
+                <span>
+                    24×7 Available
+                </span>
+
+            </div>
+
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Siddhivinayak+Multispeciality+Hospital+and+Trauma+Center+Amgaon+Maharashtra"
+              target="_blank"
+              class="btn btn-gold">
+
+              📍 Get Directions
+
+            </a>
+
+        </div>
+
+
+        <div class="map-box">
+
+            <iframe
+                src="https://www.google.com/maps?q=Siddhivinayak+Multispeciality+Hospital+and+Trauma+Center+Amgaon+Maharashtra&output=embed"
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- APPOINTMENT -->
+
+<section class="appointment">
+
+    <div>
+
+        <h2>Book Your Appointment</h2>
+
+        <p>
+            Call the hospital for appointment information.
+        </p>
+
+    </div>
+
+    <a href="tel:8623822511" class="btn">
+        📞 8623822511
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                Siddhivinayak Multispeciality Hospital
+            </h2>
+
+            <p>
+                Multispeciality Hospital & Trauma Center
+                providing professional healthcare services
+                in Amgaon.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <div class="footer-title">
+                Quick Links
+            </div>
+
+            <ul class="footer-links">
+
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Specialities</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#find">Find Us</a></li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <div class="footer-title">
+                Contact
+            </div>
+
+            <p>
+                Purani SBI Building,<br>
+                Gondia Road, Amgaon
+            </p>
+
+            <br>
+
+            <a
+              href="tel:8623822511"
+              style="color:#e7c76e;text-decoration:none;font-weight:bold;">
+
+              8623822511
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Siddhivinayak Multispeciality Hospital
+        & Trauma Center. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- FLOATING CALL -->
+
+<a href="tel:8623822511" class="call-float">
+    ☎
+</a>
+
+
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+</script>
 
 
 </body>
-</html>(
+</html>
