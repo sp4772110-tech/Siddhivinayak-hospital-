@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Eye Nova Hospital | Dr. Shruti Doye</title>
+  <meta name="description" content="Eye Nova Hospital, Doyewada, Gondia-Amgaon Road, Kidangipar. Dr. Shruti Doye, MBBS, MS (Ophthalmology). Eye care, cataract, glaucoma, glasses and lens care.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5fbff;
+      color: #183b56;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      background: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: #087ea4;
+    }
+
+    .logo span {
+      color: #173f5f;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #183b56;
+      margin-left: 25px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #087ea4;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 7%;
+      background: linear-gradient(135deg, #eafaff, #ffffff);
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .small-title {
+      color: #087ea4;
+      font-weight: bold;
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      color: #123b59;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #087ea4;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #506979;
+      margin-bottom: 28px;
+    }
+
+    .doctor {
+      font-size: 20px;
+      font-weight: bold;
+      color: #183b56;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 27px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .call-btn {
+      background: #087ea4;
+      color: white;
+    }
+
+    .call-btn:hover {
+      background: #056681;
+    }
+
+    .location-btn {
+      border: 2px solid #087ea4;
+      color: #087ea4;
+      background: white;
+    }
+
+    /* EYE ICON */
+    .eye-box {
+      margin-left: auto;
+      width: 330px;
+      height: 230px;
+      border-radius: 50%;
+      border: 8px solid #087ea4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      box-shadow: 0 15px 35px rgba(8,126,164,0.18);
+    }
+
+    .eye {
+      width: 130px;
+      height: 80px;
+      border: 7px solid #183b56;
+      border-radius: 80% 10%;
+      transform: rotate(45deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pupil {
+      width: 38px;
+      height: 38px;
+      background: #087ea4;
+      border-radius: 50%;
+    }
+
+    /* SECTION */
+    section {
+      padding: 75px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: #123b59;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #68808e;
+    }
+
+    /* ABOUT */
+    .about {
+      background: white;
+    }
+
+    .about-box {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-box p {
+      font-size: 18px;
+      color: #536d7c;
+    }
+
+    .highlight {
+      color: #087ea4;
+      font-weight: bold;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+    }
+
+    .service-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      color: #123b59;
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      color: #68808e;
+      font-size: 14px;
+    }
+
+    /* DOCTOR */
+    .doctor-section {
+      background: #eafaff;
+    }
+
+    .doctor-card {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 40px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .doctor-card h2 {
+      font-size: 32px;
+      color: #123b59;
+    }
+
+    .qualification {
+      color: #087ea4;
+      font-weight: bold;
+      margin: 10px 0 20px;
+      font-size: 18px;
+    }
+
+    /* LOCATION */
+    .location-box {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+
+    .location-box h3 {
+      font-size: 25px;
+      margin-bottom: 15px;
+      color: #123b59;
+    }
+
+    .location-box p {
+      color: #607887;
+      margin-bottom: 20px;
+    }
+
+    /* TIMING */
+    .timing {
+      background: #123b59;
+      color: white;
+      text-align: center;
+    }
+
+    .timing h2 {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .timing p {
+      font-size: 18px;
+      margin: 6px;
+    }
+
+    .closed {
+      color: #aeeaff;
+      font-weight: bold;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      background: #eafaff;
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      color: #123b59;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: #607887;
+      margin-bottom: 25px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0c2b40;
+      color: white;
+      text-align: center;
+      padding: 25px 10px;
+    }
+
+    footer p {
+      font-size: 14px;
+      margin: 5px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+
+      header {
+        padding: 15px 5%;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        text-align: center;
+        flex-direction: column;
+        padding: 60px 5%;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .eye-box {
+        margin: 45px auto 0;
+        width: 260px;
+        height: 180px;
+      }
+
+      .services {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      section {
+        padding: 55px 5%;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 37px;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .doctor-card,
+      .location-box {
+        padding: 25px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      👁️ Eye <span>Nova Hospital</span>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#doctor">Doctor</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div class="small-title">
+        PROFESSIONAL EYE CARE
+      </div>
+
+      <h1>
+        Clear Vision.<br>
+        <span>Better Life.</span>
+      </h1>
+
+      <p>
+        Welcome to <strong>Eye Nova Hospital</strong>, providing
+        professional eye care and treatment in Kidangipar,
+        Gondia–Amgaon Road.
+      </p>
+
+      <div class="doctor">
+        Dr. Shruti Doye<br>
+        <small>MBBS, MS (Ophthalmology)</small>
+      </div>
+
+      <a href="tel:9309082146" class="btn call-btn">
+        📞 Call for Appointment
+      </a>
+
+      <a href="#contact" class="btn location-btn">
+        📍 Find Us
+      </a>
+
+    </div>
+
+
+    <div class="eye-box">
+      <div class="eye">
+        <div class="pupil"></div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div class="section-title">
+      <h2>About Eye Nova Hospital</h2>
+      <p>Dedicated to better eye health</p>
+    </div>
+
+    <div class="about-box">
+
+      <p>
+        <strong>Eye Nova Hospital</strong> is located directly on
+        the <span class="highlight">Gondia–Amgaon Road</span>
+        at Doyewada, Kidangipar.
+      </p>
+
+      <br>
+
+      <p>
+        Its main-road location makes the hospital
+        <span class="highlight">easy to find and convenient for patients</span>
+        coming for eye consultation and treatment.
+      </p>
+
+      <br>
+
+      <p>
+        The hospital provides eye-care services under the
+        guidance of <strong>Dr. Shruti Doye</strong>,
+        MBBS, MS (Ophthalmology).
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services">
+
+    <div class="section-title">
+      <h2>Our Eye Care Services</h2>
+      <p>Eye care and treatment services</p>
+    </div>
+
+    <div class="services">
+
+      <div class="service-card">
+        <div class="service-icon">👓</div>
+        <h3>Glasses</h3>
+        <p>
+          Eye examination and guidance regarding
+          vision correction and glasses.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">👁️</div>
+        <h3>Lens Care</h3>
+        <p>
+          Eye care and consultation related
+          to lens requirements.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🔬</div>
+        <h3>Cataract</h3>
+        <p>
+          Consultation and eye care for
+          cataract-related concerns.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🩺</div>
+        <h3>Glaucoma</h3>
+        <p>
+          Consultation and management of
+          glaucoma-related eye conditions.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DOCTOR -->
+  <section class="doctor-section" id="doctor">
+
+    <div class="section-title">
+      <h2>Meet Your Eye Specialist</h2>
+    </div>
+
+    <div class="doctor-card">
+
+      <h2>Dr. Shruti Doye</h2>
+
+      <div class="qualification">
+        MBBS, MS (Ophthalmology)
+      </div>
+
+      <p>
+        Eye Specialist at Eye Nova Hospital,
+        providing professional eye consultation
+        and treatment.
+      </p>
+
+      <br>
+
+      <a href="tel:9309082146" class="btn call-btn">
+        📞 Call Dr. Shruti Doye
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- LOCATION -->
+  <section id="contact">
+
+    <div class="section-title">
+      <h2>Visit Eye Nova Hospital</h2>
+      <p>Easy to locate on the main road</p>
+    </div>
+
+    <div class="location-box">
+
+      <h3>📍 Our Location</h3>
+
+      <p>
+        Doyewada, Gondia–Amgaon Road,<br>
+        Kidangipar, Maharashtra
+      </p>
+
+      <p>
+        The hospital is situated directly on the
+        main road, making it easy for patients
+        to locate.
+      </p>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Eye+Nova+Hospital+Kidangipar+Gondia"
+        target="_blank"
+        class="btn location-btn">
+        🗺️ Open Google Maps
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- TIMING -->
+  <section class="timing">
+
+    <h2>Hospital Timings</h2>
+
+    <p>🕙 Monday – Saturday: <strong>10:00 AM – 6:00 PM</strong></p>
+
+    <p class="closed">
+      Sunday: Closed
+    </p>
+
+  </section>
+
+
+  <!-- CALL TO ACTION -->
+  <section class="cta">
+
+    <h2>Need an Eye Consultation?</h2>
+
+    <p>
+      Call Eye Nova Hospital to enquire about
+      consultation and treatment.
+    </p>
+
+    <a href="tel:9309082146" class="btn call-btn">
+      📞 9309082146
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 Eye Nova Hospital. All Rights Reserved.
+    </p>
+
+    <p>
+      Doyewada, Gondia–Amgaon Road, Kidangipar
+    </p>
+
+  </footer>
+
+
+</body>
+</html>(
